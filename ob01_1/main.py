@@ -9,7 +9,7 @@ class TASK():
         self.is_done = False
 
 
-class TaskManager:
+class TaskManager():
     def __init__(self):
         self.tasks = []
 
