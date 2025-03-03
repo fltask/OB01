@@ -21,8 +21,11 @@ class Store():
 
     def update_price(self, product, price):
         """Метод для обновления цены товара"""
-        self.items[product] = price
-        print(f"Товар: {product}\tНовая цена: {self.items[product]}")
+        if product in self.items:  # проверяем наличие товара
+            self.items[product] = price
+            print(f"Цена товара \"{product}\" обновлена: {price}")
+        else:
+            print(f"Ошибка: товар \"{product}\" отсутствует в магазине {self.name}")
 
     def show_goods(self):
         """Показать все товары в магазине"""
@@ -64,6 +67,7 @@ if __name__ == "__main__":
 
     # Обновляем цену товара
     store1.update_price("яблоки", 120)
+    store1.update_price("вода", 65)
 
     # Удаляем товар
     store1.del_goods("хлеб")
