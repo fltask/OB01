@@ -58,7 +58,7 @@ if __name__ == "__main__":
     manager.add_task("Провести встречу с командой", "10.03.2025")
 
     manager.list_tasks()
-    print("\n"+"#"*50)
+    print("\n" + "#" * 50)
 
     manager.mark_done(1)
     manager.mark_done(5)
@@ -67,6 +67,5 @@ if __name__ == "__main__":
     manager.mark_done(8)
     manager.mark_done(-1)
 
-
-    print("#"*50+"\n")
+    print("#" * 50 + "\n")
     manager.list_tasks()
